@@ -1,0 +1,26 @@
+{
+    "name": "caf_amqp",
+    "description": "Cloud Assistant library to use a reliable message queue",
+    "version": "0.2.0",
+    "author": "Antonio Lain <antlai@cafjs.com>",
+    "dependencies": {
+        "caf_components": "^0.2.0",
+        "amqp": "^0.2.4",
+        "node-uuid" : ">=1.4.2",
+        "caf_transport": "^0.2.0"
+    },
+    "devDependencies": {
+        "nodeunit" : ">=0.9",
+        "caf_core" : "^0.2.0"
+    },
+    "main": "index",
+    "homepage": "http://www.cafjs.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cafjs/caf_amqp.git"
+    },
+    "scripts": {
+        "test": "node ./node_modules/.bin/nodeunit"
+    },
+    "engines": { "node": ">= 0.10.1 " }
+}

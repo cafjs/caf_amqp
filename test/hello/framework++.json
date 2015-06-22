@@ -1,0 +1,17 @@
+{
+    "name": "top",
+    "components": [
+        {
+            "name": "cp"
+        },
+        {
+            "name": "amqp",
+            "module": "../../index.js#plug",
+            "description": "Reliable message queue service",
+            "env" : {
+                "host": "localhost",
+                "port" : 5672
+            }
+        }
+    ]
+}
