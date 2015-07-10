@@ -1,6 +1,15 @@
 {
     "name": "top",
+    "env" : {
+        "appPublisher" :"root",
+        "appLocalName" : "test",
+        "appSuffix" : "vcap.me"
+    },
     "components": [
+        {
+            "name": "security",
+            "module": null
+        },
         {
             "name": "cp"
         },

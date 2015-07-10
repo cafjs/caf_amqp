@@ -5,6 +5,10 @@
             "name": "log"
         },
         {
+            "name": "security",
+            "module": null
+        },
+        {
             "module": "../../index.js#plug_ca",
             "name": "amqp",
             "description": "Message queue access for this CA",
