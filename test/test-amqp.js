@@ -7,7 +7,7 @@ var myUtils = caf_core.caf_components.myUtils;
 var async = caf_core.async;
 var cli = caf_core.caf_cli;
 
-var CA_OWNER_1='other1';
+var CA_OWNER_1='amqpother1';
 var CA_LOCAL_NAME_1='bar1';
 var FROM_1 =  CA_OWNER_1 + '-' + CA_LOCAL_NAME_1;
 
@@ -15,6 +15,23 @@ var TO_QUEUE='foo';
 
 var BODY = {test: true, value: 0};
 var BODY_REPLY = {test: true, value: 1};
+
+var Server = require('./server/index.js').Server;
+
+var config = {};
+
+// address of the reliable queue
+config.mqHost = 'localhost';
+
+// name of the queue this server listens to
+config.queue = 'foo';
+
+
+var processMessage = function(msg, cb) {
+    cb(null, {test:true, value: msg.value + 1});
+};
+
+var s = new Server(config, processMessage);
 
 process.on('uncaughtException', function (err) {
                console.log("Uncaught Exception: " + err);
@@ -35,15 +52,24 @@ module.exports = {
                               cb(null);
                           } else {
                               self.$ = $;
-                              cb(err, $);
+			      s.start(function(err) {
+				  if (err) {
+				      console.log(err);
+				  } else {
+				      console.log('Started...');
+				  }
+				  cb(err, $);
+			      });
                           }
                       });
     },
     tearDown: function (cb) {
         var self = this;
+	s.stop();
         if (!this.$) {
             cb(null);
         } else {
+	    console.log('********');
             this.$.top.__ca_graceful_shutdown__(null, cb);
         }
     },

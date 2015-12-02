@@ -2,7 +2,7 @@
 
 
 var amqp = require('amqp');
-var async = require('async');
+var async = require('caf_components').async;
 
 
 var Server = exports.Server = function(config, processF) {
@@ -47,7 +47,7 @@ Server.prototype.start = function(cb) {
         host: self.config.mqHost,
         heartbeat : 5
     }, {
-        reconnect: true
+        reconnect: false
     });
 
     this.con.on('ready', function () {
