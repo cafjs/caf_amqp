@@ -2,7 +2,9 @@
 
 
 var amqp = require('amqp');
-var async = require('caf_components').async;
+var caf_core =  require('caf_core');
+var caf_comp = caf_core.caf_components;
+var async = caf_comp.async;
 
 
 var Server = exports.Server = function(config, processF) {
