@@ -5,5 +5,7 @@ build:
     - npm test
 
 compose:
-  database:
+  queue:
     image: rabbitmq:3
+  database:
+    image: redis:2.8
