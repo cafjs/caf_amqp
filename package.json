@@ -1,10 +1,10 @@
 {
     "name": "caf_amqp",
     "description": "Cloud Assistant library to use a reliable message queue",
-    "version": "0.2.5",
+    "version": "0.3.0",
     "author": "Antonio Lain <antlai@cafjs.com>",
     "dependencies": {
-        "caf_core": "^0.2.0",
+        "caf_core": "^0.3.0",
         "amqp": "^0.2.4",
         "node-uuid" : ">=1.4.2"
     },
