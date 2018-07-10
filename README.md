@@ -2,10 +2,10 @@
 
 Co-design permanent, active, stateful, reliable cloud proxies with your web app or gadget.
 
-See http://www.cafjs.com 
+See http://www.cafjs.com
 
 ## CAF AMQP
-[![Build Status](http://ci.cafjs.com/api/badges/cafjs/caf_amqp/status.svg)](http://ci.cafjs.com/cafjs/caf_amqp)
+[![Build Status](https://travis-ci.org/cafjs/caf_amqp.svg?branch=master)](https://travis-ci.org/cafjs/caf_amqp)
 
 
 This library provides components to access reliable message queues, such as RabbitMQ.
@@ -13,7 +13,7 @@ This library provides components to access reliable message queues, such as Rabb
 ## API
 
     lib/proxy_amqp.js
- 
+
 ## Configuration Example
 
 ### framework.json
@@ -30,7 +30,7 @@ This library provides components to access reliable message queues, such as Rabb
                         "authMechanism": "AMQPLAIN"
                     }
         }
-    
+
 ### ca.json
 
     {
