@@ -9,7 +9,7 @@
         "node-uuid" : ">=1.4.2"
     },
     "devDependencies": {
-        "eslint": "^3.1.1",
+        "eslint": "^6.8.0",
         "nodeunit" : ">=0.9"
     },
     "main": "index",
@@ -20,8 +20,8 @@
     },
     "scripts": {
         "test": "node ./node_modules/.bin/nodeunit",
-        "eslint" : "./node_modules/.bin/eslint .",
-        "eslintfix" : "./node_modules/.bin/eslint --fix ."
+        "eslint" : "./node_modules/.bin/eslint -c .eslintrc.js .",
+        "eslintfix" : "./node_modules/.bin/eslint -c .eslintrc.js --fix ."
     },
     "engines": { "node": ">= 0.10.1 " }
 }
