@@ -1,10 +1,10 @@
-# CAF (Cloud Assistant Framework)
+# Caf.js
 
 Co-design permanent, active, stateful, reliable cloud proxies with your web app or gadget.
 
-See http://www.cafjs.com
+See https://www.cafjs.com
 
-## CAF AMQP
+## Library to Access AMQP Services
 [![Build Status](https://travis-ci.org/cafjs/caf_amqp.svg?branch=master)](https://travis-ci.org/cafjs/caf_amqp)
 
 
